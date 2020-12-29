@@ -10,15 +10,24 @@ public class thirdPersonMove : MonoBehaviour
     public float turnSmoothTime = 0.1f;
     public float turnSmoothVelocity;
 
+    public bool isGrounded;
+    private Vector3 playerVelocity;
+    private float jumpHeight = 2.0f;
+    private float gravityValue = -9.81f;
+
+
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
     void Update()
     {
+       isGrounded = controller.isGrounded;
+       if (isGrounded && playerVelocity.y < 0) {
+            playerVelocity.y = -1f;
+       }
        float h = Input.GetAxisRaw("Horizontal");
        float v = Input.GetAxisRaw("Vertical");
        Vector3 dir = new Vector3(h , 0f, v).normalized;
@@ -30,5 +39,11 @@ public class thirdPersonMove : MonoBehaviour
            Vector3 movedir = Quaternion.Euler(0f, targetA, 0f) * Vector3.forward;
            controller.Move(movedir.normalized * s * Time.deltaTime);
        }
+       if (Input.GetButtonDown("Jump") && isGrounded)
+        {
+            playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
+        }
+        playerVelocity.y += gravityValue * Time.deltaTime;
+        controller.Move(playerVelocity * Time.deltaTime);
     }
 }
