@@ -13,7 +13,7 @@ public class SC_MainMenu : MonoBehaviour
     public void PlayNowButton()
     {
         Debug.Log("Text: start");
-        UnityEngine.SceneManagement.SceneManager.LoadScene("move");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Scenes/move");
     }
 
     public void CreditsButton()
