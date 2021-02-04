@@ -1,37 +1,38 @@
 ﻿using UnityEngine;
 
-public class CharacterStat : MonoBehaviour
-{  
-    public int maxHealth = 150;
-    public int currentHealth {get; private set;}
+public class CharacterStat : MonoBehaviour {
+
+	public Stat maxHealth;
+	public int currentHealth {get;protected set;}
     public heath_bar health_bar;
-    public Transform explosion;
+	public Stat damage;
+	public Stat armor;
 
-    public Stat damage;
-    public Stat armor;
+	public event System.Action OnHealthReachedZero;
 
-    void Awake() {
-        currentHealth = maxHealth;
-    }
+	public virtual void Awake() {
+		currentHealth = maxHealth.GetValue();
+	}
 
-    void Start() {
-        health_bar.SetMaxHealth(maxHealth);
-    }
-    public void TakeDamage(int damage) {
-        damage -= armor.GetValue();
-        damage = Mathf.Clamp(damage, 0, int.MaxValue);
-        currentHealth -= damage;
-        if (currentHealth <= 0) {
-            Die();
-        }
-    }
+	public virtual void Start () {
+        health_bar.SetMaxHealth(maxHealth.GetValue());
+	}
 
-    private void Die(){
-        if(explosion) {
-            GameObject exploder = ((Transform)Instantiate(explosion, this.transform.position, this.transform.rotation)).gameObject;
-            Destroy(exploder, 2.0f);
-        }
-        PlayerManager.instance.KillPlayer();
+	public void TakeDamage (int damage){
+		damage -= armor.GetValue();
+		damage = Mathf.Clamp(damage, 0, int.MaxValue);
+		currentHealth -= damage;
+		Debug.Log(transform.name + " takes " + damage + " damage.");
+		if (currentHealth <= 0) {
+			if (OnHealthReachedZero != null)
+				OnHealthReachedZero ();
+		}
+	}
+	public void Heal (int amount) {
+		currentHealth += amount;
+		currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth.GetValue());
+	}
 
-    }
+
+
 }

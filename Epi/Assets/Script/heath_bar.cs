@@ -5,12 +5,10 @@ using UnityEngine.UI;
 
 public class heath_bar : MonoBehaviour
 {
-
     public Slider slider;
     public Gradient gradient;
     public Image fill;
 
-    
     public void SetMaxHealth(float health) {
         slider.maxValue = health;
         slider.value = health;

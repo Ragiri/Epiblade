@@ -13,12 +13,16 @@ public class Interactable : MonoBehaviour
 
     void Start() {
         player = PlayerManager.instance.player.transform;
+        //Debug.Log(player.position);
     }
     public virtual void Interact() {
         Debug.Log("Interacting with" + transform.name);
     }
     void Update() {
-            float distance = Vector3.Distance(player.position, interactionTransform.position);
+            float distance = 999;
+            if (interactionTransform != null)
+                distance = Vector3.Distance(player.position, interactionTransform.position);
+            //print("Distance to other: " + distance);
             if (distance <= radius) {
                 Interact();
                 hasInteract = true;
