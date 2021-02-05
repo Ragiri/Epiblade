@@ -7,19 +7,19 @@ public class PlayerAttack : MonoBehaviour
 {
     public Camera cam;
     public Interactable focus;
-    public GameObject Hand;
-    public Weapon myWeapon;
+    //public GameObject Hand;
+    //public Weapon myWeapon;
     Animator handAnimation;
-    public float MaxHealth;
-    public float Health;
+    //public float MaxHealth;
+    //public float Health;
     public int level;
     public int mana;
     public int atk;
     public int def;
     public int exp;
-    public float attackSpeed = 1f;
-    private float attackCooldown = 0f;
-    public heath_bar health_bar;
+    //public float attackSpeed = 1f;
+    //private float attackCooldown = 0f;
+    //public heath_bar health_bar;
 
     //move
     public CharacterController controller;
@@ -35,8 +35,8 @@ public class PlayerAttack : MonoBehaviour
 
     void Start()
     {
-        handAnimation = Hand.GetComponent<Animator>();
-        myWeapon = Hand.GetComponentInChildren<Weapon>();
+        //handAnimation = Hand.GetComponent<Animator>();
+        //myWeapon = Hand.GetComponentInChildren<Weapon>();
     }
 
     // Update is called once per frame
@@ -63,11 +63,11 @@ public class PlayerAttack : MonoBehaviour
         }
         playerVelocity.y += gravityValue * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);
-        //
-        attackCooldown -= Time.deltaTime;
-        if (Input.GetMouseButtonUp(0)) {
+        
+        //attackCooldown -= Time.deltaTime;
+        /*if (Input.GetMouseButtonUp(0)) {
             doAttack();
-        }
+        }*/
     }
     public void SavePlayer() {
         SaveSystem.SavePlayer(this);
@@ -81,7 +81,7 @@ public class PlayerAttack : MonoBehaviour
         atk = data.atk;
         def = data.def;
         exp = data.exp;
-        Health = data.health;
+        //Health = data.health;
         Vector3 position;
         position.x = data.position[0];
         position.y = data.position[1];
@@ -89,7 +89,7 @@ public class PlayerAttack : MonoBehaviour
         transform.position = position;
         Debug.Log("Load");
     }
-
+/*
     public void Attack(float dam) {
         if (attackCooldown <= 0f) {
             Health -= dam - def;
@@ -121,7 +121,7 @@ public class PlayerAttack : MonoBehaviour
             }
         }
     }
-
+*/
     void SetFocus(Interactable newFocus) {
         focus = newFocus;
         newFocus.OnFocused(transform);

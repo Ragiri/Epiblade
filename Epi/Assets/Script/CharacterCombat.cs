@@ -5,25 +5,19 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterStat))]
 public class CharacterCombat : MonoBehaviour
 {
+    CharacterStat myStat;
     public float attackSpeed = 1f;
     private float attackCooldown = 0f;
 
-    CharacterStat myStats;
-
-    void Start()
-    {
-        myStats = GetComponent<CharacterStat>();
+    void Start() {
+        myStat = GetComponent<CharacterStat>();
     }
-
-    void Update()
-    {
-        attackCooldown -= Time.deltaTime;    
+    void Update() {
+        attackCooldown -= Time.deltaTime;
     }
-
     public void Attack(CharacterStat targetStat) {
-        if (attackCooldown <= 0f) {
-            targetStat.TakeDamage(myStats.damage.GetValue());
-            print("attack");
+        if (attackCooldown <= 0) {
+            targetStat.TakeDamage(myStat.damage.GetValue());
             attackCooldown = 1f / attackSpeed;
         }
     }

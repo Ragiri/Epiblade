@@ -5,7 +5,7 @@ using UnityEngine;
 public class Interactable : MonoBehaviour
 {
     public float radius = 3f;
-    public float attackDamage;
+    //public float attackDamage;
     bool isFocus = false;
     Transform player;
     bool hasInteract = false;

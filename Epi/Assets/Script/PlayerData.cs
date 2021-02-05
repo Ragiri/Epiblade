@@ -15,7 +15,7 @@ public class PlayerData {
 
     public PlayerData(PlayerAttack player) {
         lvl = player.level;
-        health = player.Health;
+        //health = player.Health;
         mana = player.mana;
         atk = player.atk;
         def = player.def;

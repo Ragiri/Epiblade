@@ -11,14 +11,13 @@ GameObject:
   - component: {fileID: 3662860281930511713}
   - component: {fileID: 394842941804640964}
   - component: {fileID: 2494489352944815630}
-  - component: {fileID: 2462515136345592924}
   - component: {fileID: 1732155129701468659}
-  - component: {fileID: 3845970144258184562}
   - component: {fileID: 4151976537155612634}
   - component: {fileID: -47662934543033}
-  - component: {fileID: 8504996816807589336}
-  - component: {fileID: 2958926075914181100}
-  - component: {fileID: 110569328910901857}
+  - component: {fileID: 725577318219563712}
+  - component: {fileID: 6140253051536049569}
+  - component: {fileID: 8462272369386728620}
+  - component: {fileID: 1317213783212353421}
   m_Layer: 9
   m_Name: alien_1
   m_TagString: Ennemy
@@ -90,19 +89,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &2462515136345592924
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4151976537155612635}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcfad1ea45795a44d9dac37610f4a8c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lookRadius: 10
 --- !u!195 &1732155129701468659
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -125,22 +111,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &3845970144258184562
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4151976537155612635}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c52ce2f5f9f06b4eae32631568046da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaxHealth: 25
-  Health: 25
-  health_bar: {fileID: 3845970143724185606}
-  explosion: {fileID: 1150458821350594935, guid: 393063d7f3c1147409cc430fbe06c7d2, type: 3}
 --- !u!65 &4151976537155612634
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -170,7 +140,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &8504996816807589336
+--- !u!114 &725577318219563712
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -179,14 +149,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 4151976537155612635}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ab2bde80ec66124a85aa27b605d9897, type: 3}
+  m_Script: {fileID: 11500000, guid: a4b4d15817083fc428e974fb2c3db6a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackSpeed: 1
+--- !u!114 &6140253051536049569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4151976537155612635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2ece2cc788d64d4c8e41653dcbeff6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 4
-  attackDamage: 8
   interactionTransform: {fileID: 3662860281930511713}
-  explosion: {fileID: 1150458821350594935, guid: 393063d7f3c1147409cc430fbe06c7d2, type: 3}
---- !u!114 &2958926075914181100
+--- !u!114 &8462272369386728620
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -195,17 +176,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 4151976537155612635}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb31bee28a13e7840ad88a244cdf7011, type: 3}
+  m_Script: {fileID: 11500000, guid: 02cada1be3047b1438b70df6f8e33e4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth:
-    baseValue: 0
+  maxHealth: 150
   health_bar: {fileID: 3845970143724185606}
   damage:
     baseValue: 2
   armor:
-    baseValue: 0
---- !u!114 &110569328910901857
+    baseValue: 1
+  explosion: {fileID: 1150458821350594935, guid: 393063d7f3c1147409cc430fbe06c7d2, type: 3}
+--- !u!114 &1317213783212353421
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -214,10 +195,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4151976537155612635}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d78eec70619ea84bad20696b5c61bb2, type: 3}
+  m_Script: {fileID: 11500000, guid: cfa3b7a6e7ef6654b8ed812f397ae1f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackSpeed: 1
+  LookRadius: 10
 --- !u!1001 &1297395369308458574
 PrefabInstance:
   m_ObjectHideFlags: 0

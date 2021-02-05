@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9f0565d4d55c0e8458505facba521d80, type: 3}
-  m_Name: Test item
+  m_Name: Potion
   m_EditorClassIdentifier: 
-  name: sword
-  icon: {fileID: 21300000, guid: acd51cd7ffbd8124b848a7909de814d0, type: 3}
+  name: potion
+  icon: {fileID: 21300000, guid: 236153fb62fa7984bbccd3292d623be3, type: 3}
   isDefaultItem: 0

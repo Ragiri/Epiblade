@@ -5,6 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class Stat {
 
+    [SerializeField]
 	public int baseValue;
 	private List<int> modifiers = new List<int>();
 

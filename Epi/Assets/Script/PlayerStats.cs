@@ -6,9 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerStats : CharacterStat {
 
-	public override void Start () {
-
-		base.Start();
+	void Start () {
 		EquipmentManager.instance.onEquipmentChanged += OnEquipmentChanged;
 	}
 
@@ -17,9 +15,14 @@ public class PlayerStats : CharacterStat {
 			armor.AddModifier (newItem.armorModifier);
 			damage.AddModifier (newItem.damageModifier);
 		} if (oldItem != null) {
-			armor.RemoveModifier(oldItem.armorModifier);
-			damage.RemoveModifier(oldItem.armorModifier);
+			armor.AddModifier (oldItem.armorModifier);
+			damage.AddModifier (oldItem.damageModifier);
 		}
+	}
 
+	
+    public override void Die() {
+		base.Die();
+		PlayerManager.instance.KillPlayer();
 	}
 }
