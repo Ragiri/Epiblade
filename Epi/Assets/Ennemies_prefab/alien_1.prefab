@@ -33,7 +33,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4151976537155612635}
   m_LocalRotation: {x: 0.17587046, y: 0.6792677, z: 0.6912277, w: -0.17282747}
-  m_LocalPosition: {x: 29.526295, y: 1.2844025, z: 41.590916}
+  m_LocalPosition: {x: 0.6666667, y: 56.666668, z: 0.6666667}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children:
   - {fileID: 3845970144957428685}
@@ -179,13 +179,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02cada1be3047b1438b70df6f8e33e4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 150
+  maxHealth: 30
   health_bar: {fileID: 3845970143724185606}
   damage:
     baseValue: 2
   armor:
     baseValue: 1
+  level:
+    baseValue: 1
+  exp:
+    baseValue: 0
+  maxMana: 20
   explosion: {fileID: 1150458821350594935, guid: 393063d7f3c1147409cc430fbe06c7d2, type: 3}
+  Prefab1: {fileID: 5879131395432559906, guid: 8b08544b685db144d954077a22863b17, type: 3}
+  Prefab2: {fileID: 7855947328267413595, guid: b30925d11fdae48448c73a35bc75b734, type: 3}
+  Prefab3: {fileID: 7727791736193906994, guid: cae4fdbc9996bb446ac046e72bea6ead, type: 3}
 --- !u!114 &1317213783212353421
 MonoBehaviour:
   m_ObjectHideFlags: 0

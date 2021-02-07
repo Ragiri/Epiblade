@@ -6,20 +6,25 @@ using UnityEngine;
 public class PlayerData {
 
     public int lvl;
-    public float health;
+    public int health;
     public int mana;
     public int atk;
     public int def;
     public int exp;
+    public int maxHealth;
+    public int maxMana;
+    List<Item> items;
     public float[] position;
 
-    public PlayerData(PlayerAttack player) {
-        lvl = player.level;
-        //health = player.Health;
+    public PlayerData(CharacterStat player) {
+        lvl = player.level.GetValue();
+        health = player.currentHealth;
         mana = player.mana;
-        atk = player.atk;
-        def = player.def;
-        exp = player.exp;
+        maxHealth = player.maxHealth;
+        maxMana = player.maxMana;
+        atk = player.damage.GetValue();
+        def = player.armor.GetValue();
+        exp = player.exp.GetValue();
 
         position = new float[3];
         position[0] = player.transform.position.x;

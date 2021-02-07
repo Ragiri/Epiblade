@@ -17,7 +17,8 @@ public class Enemy : Interactable {
         playerManager = PlayerManager.instance;
         myStat = GetComponent<CharacterStat>();
         CharacterCombat playerCombat = playerManager.player.GetComponent<CharacterCombat>();
-        if (playerCombat != null) {
+        //Weapon myWeapon = playerManager.player.Hand.GetComponent<Weapon>();
+        if (playerCombat != null && Input.GetMouseButtonUp(0)) {
             playerCombat.Attack(myStat);
         }
     }

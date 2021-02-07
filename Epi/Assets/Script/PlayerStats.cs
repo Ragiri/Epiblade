@@ -19,7 +19,6 @@ public class PlayerStats : CharacterStat {
 			damage.AddModifier (oldItem.damageModifier);
 		}
 	}
-
 	
     public override void Die() {
 		base.Die();

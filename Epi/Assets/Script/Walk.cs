@@ -5,14 +5,30 @@ using UnityEngine.AI;
 public class Walk : MonoBehaviour
 {
     public Animator animator;
-    NavMeshAgent agent;
+    
+    public bool isGrounded;
 
     void Start() {
-        agent = GetComponent<NavMeshAgent>();
     }
 
     void Update() {
-        float speedPercent = agent.velocity.magnitude / agent.speed;
-        animator.SetFloat("speedPercent", speedPercent, .1f, Time.deltaTime);
+        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.UpArrow)) {
+            animator.SetBool("walk", true);
+        } else {
+            animator.SetBool("walk", false);
+        }
+                
+        if (Input.GetMouseButtonDown(0)) {
+            animator.SetTrigger("attack");
+        }
+        
+        if (Input.GetButtonDown("Jump") && isGrounded) {
+            animator.SetTrigger("jump");
+        }
+        if (!Input.GetKey(KeyCode.RightArrow) && !Input.GetKey(KeyCode.LeftArrow) && !Input.GetKey(KeyCode.DownArrow) && !Input.GetKey(KeyCode.UpArrow)) {
+            animator.SetBool("idle", true);
+        } else {
+            animator.SetBool("idle", false);
+        }
     }
 }
