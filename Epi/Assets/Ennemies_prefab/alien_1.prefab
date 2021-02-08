@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4b4d15817083fc428e974fb2c3db6a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackSpeed: 1
+  attackSpeed: 0.2
 --- !u!114 &6140253051536049569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,6 +190,7 @@ MonoBehaviour:
   exp:
     baseValue: 0
   maxMana: 20
+  capacityPoint: 0
   explosion: {fileID: 1150458821350594935, guid: 393063d7f3c1147409cc430fbe06c7d2, type: 3}
   Prefab1: {fileID: 5879131395432559906, guid: 8b08544b685db144d954077a22863b17, type: 3}
   Prefab2: {fileID: 7855947328267413595, guid: b30925d11fdae48448c73a35bc75b734, type: 3}

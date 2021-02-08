@@ -9,6 +9,8 @@ public class Interactable : MonoBehaviour
     bool isFocus = false;
     Transform player;
     bool hasInteract = false;
+    public float Speed = 0.19f;
+    public float Cooldown = 0f;
     public Transform interactionTransform;
 
     void Start() {
@@ -27,6 +29,7 @@ public class Interactable : MonoBehaviour
                 Interact();
                 hasInteract = true;
             }
+            Cooldown -= Time.deltaTime;
     }
     public void OnFocused(Transform playerTransform) {
         isFocus = true;

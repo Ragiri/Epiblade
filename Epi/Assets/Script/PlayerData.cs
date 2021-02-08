@@ -13,7 +13,8 @@ public class PlayerData {
     public int exp;
     public int maxHealth;
     public int maxMana;
-    List<Item> items;
+    public List<Item> items;
+    public List<Capacity> capacity;
     public float[] position;
 
     public PlayerData(CharacterStat player) {
@@ -25,6 +26,7 @@ public class PlayerData {
         atk = player.damage.GetValue();
         def = player.armor.GetValue();
         exp = player.exp.GetValue();
+        //items = Inventory.instance.items;
 
         position = new float[3];
         position[0] = player.transform.position.x;

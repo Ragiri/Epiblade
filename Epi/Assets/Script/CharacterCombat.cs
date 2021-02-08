@@ -15,9 +15,9 @@ public class CharacterCombat : MonoBehaviour
     void Update() {
         attackCooldown -= Time.deltaTime;
     }
-    public void Attack(CharacterStat targetStat) {
+    public void Attack(CharacterStat targetStat, int power) {
         if (attackCooldown <= 0) {
-            targetStat.TakeDamage(myStat.damage.GetValue());
+            targetStat.TakeDamage(myStat.damage.GetValue() + power);
             attackCooldown = 1f / attackSpeed;
         }
     }

@@ -6,6 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class PlayerStats : CharacterStat {
 
+	public SuperAttack superAttack;
+	public CapacityHeal HealPv;
+	public DefanceUp DefUp;
+
 	void Start () {
 		EquipmentManager.instance.onEquipmentChanged += OnEquipmentChanged;
 	}

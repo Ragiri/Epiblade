@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4578a0e2b3b16414ca00a5c80e2215df, type: 3}
   m_Name: Mana_little
   m_EditorClassIdentifier: 
-  name: New Item
+  name: Mana Heal
   icon: {fileID: 0}
   isDefaultItem: 0
-  healNb: 0
-  type: 0
+  healNb: 4
+  type: 1

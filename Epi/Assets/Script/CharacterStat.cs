@@ -3,14 +3,15 @@
 public class CharacterStat : MonoBehaviour {
 
 	public int maxHealth = 150;
-	public int currentHealth {get;protected set;}
+	public int currentHealth;
     public heath_bar health_bar;
 	public Stat damage;
 	public Stat armor;
     public Stat level;
     public Stat exp;
 	public int maxMana = 20;
-    public int  mana {get;protected set;}
+	public int capacityPoint = 0;
+    public int mana;
 
 	//public event System.Action OnHealthReachedZero;
 
@@ -19,6 +20,7 @@ public class CharacterStat : MonoBehaviour {
 
 	public virtual void Awake() {
 		currentHealth = maxHealth;
+		mana = maxMana;
         health_bar.SetMaxHealth(maxHealth);
 	}
 
@@ -45,6 +47,7 @@ public class CharacterStat : MonoBehaviour {
         exp.baseValue = data.exp;
         currentHealth = data.health;
 		health_bar.SetHealth(currentHealth);
+		//Inventory.instance.items = data.items;
         Vector3 position;
         position.x = data.position[0];
         position.y = data.position[1];
@@ -72,6 +75,10 @@ public class CharacterStat : MonoBehaviour {
 		GainLvl();
 	}
 
+	public void UsePoint() {
+		capacityPoint -= 1;
+	}
+
 	public void GainLvl() {
 		if (exp.GetValue() >= 200 * level.GetValue()) {
 			exp.baseValue -= 200 * level.GetValue();
@@ -82,6 +89,7 @@ public class CharacterStat : MonoBehaviour {
 				maxHealth += 5;
 				currentHealth = maxHealth;
 				maxMana += 1;
+				capacityPoint += 1;
 				mana = maxMana;
 				health_bar.SetMaxHealth(maxHealth);
 			} else {

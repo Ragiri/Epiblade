@@ -24,7 +24,7 @@ public class EnemyController : MonoBehaviour
             agent.SetDestination(target.position);
             if (distance <= agent.stoppingDistance) {
                 if (targetStat != null)
-                    combat.Attack(targetStat);
+                    combat.Attack(targetStat, 0);
                 FaceTarget();
             }
         }

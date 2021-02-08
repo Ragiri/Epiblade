@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4578a0e2b3b16414ca00a5c80e2215df, type: 3}
-  m_Name: Potion_little
+  m_Script: {fileID: 11500000, guid: 69f249dad25c48b4a8092de14f966455, type: 3}
+  m_Name: Super Attack 1
   m_EditorClassIdentifier: 
-  name: Little Potion
-  icon: {fileID: 21300000, guid: 236153fb62fa7984bbccd3292d623be3, type: 3}
-  isDefaultItem: 0
-  healNb: 20
-  type: 0
+  name: New Item
+  icon: {fileID: 0}
+  lvl: 0
+  power: 0
+  animator: {fileID: 0}

@@ -58,11 +58,6 @@ public class PlayerAttack : MonoBehaviour
         }
         playerVelocity.y += gravityValue * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);
-        
-        //attackCooldown -= Time.deltaTime;
-        /*if (Input.GetMouseButtonUp(0)) {
-            doAttack();
-        }*/
     }
     public void SavePlayer() {
         SaveSystem.SavePlayer(PlayerManager.instance.player.GetComponent<CharacterStat>());
