@@ -9,9 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f0565d4d55c0e8458505facba521d80, type: 3}
-  m_Name: Potion
+  m_Script: {fileID: 11500000, guid: 4578a0e2b3b16414ca00a5c80e2215df, type: 3}
+  m_Name: Potion_little
   m_EditorClassIdentifier: 
-  name: potion
+  name: Little Potion
   icon: {fileID: 21300000, guid: 236153fb62fa7984bbccd3292d623be3, type: 3}
   isDefaultItem: 0
+  healNb: 20
+  type: 0

@@ -371,7 +371,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 601f1393de150d344afc777e84062c8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 3
-  attackDamage: 0
+  radius: 2
   interactionTransform: {fileID: 7371898722071786209}
-  item: {fileID: 11400000, guid: fb149722bce2edf4e99f3179146783a0, type: 2}
+  item: {fileID: 11400000, guid: bc09022d7c941a04ab49adaf2a20dcc7, type: 2}
