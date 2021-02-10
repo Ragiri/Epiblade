@@ -9,9 +9,11 @@ public class CharacterStat : MonoBehaviour {
 	public Stat armor;
     public Stat level;
     public Stat exp;
+	public int gold;
 	public int maxMana = 20;
 	public int capacityPoint = 0;
     public int mana;
+	public Quest quest;
 
 	//public event System.Action OnHealthReachedZero;
 
@@ -24,7 +26,15 @@ public class CharacterStat : MonoBehaviour {
         health_bar.SetMaxHealth(maxHealth);
 	}
 
-    public void TakeDamage (int damage) {
+    public void TakeDamage (int damage, bool player) {
+		int defArmor = 0; 
+		if (player) {
+			for (int i = 0; i != EquipmentManager.instance.currentEquipement.Length; i++) {
+				if (EquipmentManager.instance.currentEquipement[i] != null)
+					defArmor = EquipmentManager.instance.currentEquipement[i].armorModifier;
+			}
+			damage -= defArmor;
+		}
         damage -= armor.GetValue();
 		damage = Mathf.Clamp(damage, 0, int.MaxValue);
 		if (damage <= 0)
@@ -43,6 +53,7 @@ public class CharacterStat : MonoBehaviour {
 		maxHealth = data.maxHealth;
 		maxMana = data.maxMana;
         armor.baseValue = data.def;
+		gold = data.gold;
         damage.baseValue = data.atk;
         exp.baseValue = data.exp;
         currentHealth = data.health;

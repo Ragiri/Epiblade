@@ -10,7 +10,7 @@ public class PlayerStats : CharacterStat {
 	public CapacityHeal HealPv;
 	public DefanceUp DefUp;
 
-	void Start () {
+/*	void Start () {
 		EquipmentManager.instance.onEquipmentChanged += OnEquipmentChanged;
 	}
 
@@ -22,7 +22,7 @@ public class PlayerStats : CharacterStat {
 			armor.AddModifier (oldItem.armorModifier);
 			damage.AddModifier (oldItem.damageModifier);
 		}
-	}
+	}*/
 	
     public override void Die() {
 		base.Die();

@@ -20,6 +20,9 @@ public class Interactable : MonoBehaviour
     public virtual void Interact() {
         Debug.Log("Interacting with" + transform.name);
     }
+    public virtual void QuitInteract() {
+        Debug.Log("Stop interacting with" + transform.name);
+    }
     void Update() {
             float distance = 999;
             if (interactionTransform != null)
@@ -28,6 +31,10 @@ public class Interactable : MonoBehaviour
             if (distance <= radius) {
                 Interact();
                 hasInteract = true;
+            }
+            if (distance > radius && hasInteract) {
+                QuitInteract();
+                hasInteract = false;
             }
             Cooldown -= Time.deltaTime;
     }

@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 725577318219563712, guid: bd5537258f1b94f438b076ca14a0abe8, type: 3}
+      propertyPath: attackSpeed
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 1317213783212353421, guid: bd5537258f1b94f438b076ca14a0abe8, type: 3}
       propertyPath: LookRadius
       value: 10

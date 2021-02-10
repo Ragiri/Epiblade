@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Mana_little
   m_EditorClassIdentifier: 
   name: Mana Heal
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 4d90253ec99b66d4d8f3872c0cdc6a8f, type: 3}
   isDefaultItem: 0
   healNb: 4
   type: 1

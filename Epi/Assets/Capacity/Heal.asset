@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Heal
   m_EditorClassIdentifier: 
   name: Heal
-  icon: {fileID: 21300000, guid: 236153fb62fa7984bbccd3292d623be3, type: 3}
-  lvl: 1
+  icon: {fileID: 21300000, guid: f7057182523663b4e86eec59dc13440a, type: 3}
+  lvl: 2
   lvlup: 0
-  power: 0
+  power: 10
   animator: {fileID: 0}
   particle: {fileID: 4389676441253346730, guid: 81fd45c5b8a513645bf6631e07a2316e, type: 3}

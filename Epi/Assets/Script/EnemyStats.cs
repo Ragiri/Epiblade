@@ -21,6 +21,7 @@ public class EnemyStats : CharacterStat {
         CharacterStat pl = PlayerManager.instance.player.GetComponent<CharacterStat>();
         int xp = level.GetValue() * 30;
         pl.GainXP(xp);
+        pl.gold += level.GetValue() * 60;
         int prefabIndex = UnityEngine.Random.Range(0,3);
         Instantiate(prefabList[prefabIndex], transform.position, Quaternion.identity);
         Destroy(gameObject);
