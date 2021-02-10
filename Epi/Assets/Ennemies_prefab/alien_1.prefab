@@ -32,14 +32,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4151976537155612635}
-  m_LocalRotation: {x: 0.17587046, y: 0.6792677, z: 0.6912277, w: -0.17282747}
-  m_LocalPosition: {x: 0.6666667, y: 56.666668, z: 0.6666667}
+  m_LocalRotation: {x: 0, y: 0.9691234, z: -0, w: -0.24657604}
+  m_LocalPosition: {x: 191.87064, y: 54.55511, z: 455.26044}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children:
   - {fileID: 3845970144957428685}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -91, y: 208.55, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 208.55, z: 0}
 --- !u!33 &394842941804640964
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -166,6 +166,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 4
+  Speed: 0.19
+  Cooldown: 0
   interactionTransform: {fileID: 3662860281930511713}
 --- !u!114 &8462272369386728620
 MonoBehaviour:
@@ -180,6 +182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 30
+  currentHealth: 0
   health_bar: {fileID: 3845970143724185606}
   damage:
     baseValue: 2
@@ -191,6 +194,7 @@ MonoBehaviour:
     baseValue: 0
   maxMana: 20
   capacityPoint: 0
+  mana: 0
   explosion: {fileID: 1150458821350594935, guid: 393063d7f3c1147409cc430fbe06c7d2, type: 3}
   Prefab1: {fileID: 5879131395432559906, guid: 8b08544b685db144d954077a22863b17, type: 3}
   Prefab2: {fileID: 7855947328267413595, guid: b30925d11fdae48448c73a35bc75b734, type: 3}
