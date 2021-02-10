@@ -12,7 +12,6 @@ public class SpawnZone : MonoBehaviour {
     public GameObject Prefab3;
 
     void Start() {
-        
         prefabList.Add(Prefab1);
         prefabList.Add(Prefab2);
         prefabList.Add(Prefab3);
