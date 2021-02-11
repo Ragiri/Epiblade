@@ -27,7 +27,7 @@ public class Interactable : MonoBehaviour
             float distance = 999;
             if (interactionTransform != null)
                 distance = Vector3.Distance(player.position, interactionTransform.position);
-            //print("Distance to other: " + distance);
+            
             if (distance <= radius) {
                 Interact();
                 hasInteract = true;

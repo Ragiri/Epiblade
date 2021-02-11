@@ -19,7 +19,6 @@ public class SpawnZone : MonoBehaviour {
         for (; enemies.Count != 20;) {
             Vector3 position = new Vector3(Random.Range(transform.position.x - LookRadius, transform.position.x + LookRadius ), 47, Random.Range(transform.position.z - LookRadius, transform.position.z + LookRadius ));
             int prefabIndex = UnityEngine.Random.Range(0,3);
-            Debug.Log(position);
             enemies.Add(Instantiate(prefabList[prefabIndex], position, Quaternion.identity));
         }
     }
@@ -31,7 +30,6 @@ public class SpawnZone : MonoBehaviour {
                 int prefabIndex = UnityEngine.Random.Range(0,3);
                 NavMeshHit closestHit;
                 if( NavMesh.SamplePosition(  position, out closestHit, 500, 1 ) ){
-                    Debug.Log(position);
                     prefabList[prefabIndex].transform.position = closestHit.position;
                     prefabList[prefabIndex].AddComponent<NavMeshAgent>();
                     enemies.Add(Instantiate(prefabList[prefabIndex], position, Quaternion.identity));

@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Little Potion
   icon: {fileID: 21300000, guid: 236153fb62fa7984bbccd3292d623be3, type: 3}
+  price: 250
   isDefaultItem: 0
   healNb: 20
   type: 0

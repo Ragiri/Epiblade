@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 725577318219563712, guid: bd5537258f1b94f438b076ca14a0abe8, type: 3}
       propertyPath: attackSpeed
-      value: 0.6
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 1317213783212353421, guid: bd5537258f1b94f438b076ca14a0abe8, type: 3}
       propertyPath: LookRadius
@@ -74,6 +74,10 @@ PrefabInstance:
     - target: {fileID: 4151976537155612635, guid: bd5537258f1b94f438b076ca14a0abe8, type: 3}
       propertyPath: m_Name
       value: alien_lvl4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6140253051536049569, guid: bd5537258f1b94f438b076ca14a0abe8, type: 3}
+      propertyPath: radius
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8462272369386728620, guid: bd5537258f1b94f438b076ca14a0abe8, type: 3}
       propertyPath: maxHealth

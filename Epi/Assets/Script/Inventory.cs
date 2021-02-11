@@ -24,7 +24,6 @@ public class Inventory : MonoBehaviour
     public List<Item> items = new List<Item>();
 
     public bool Add(Item item) {
-        if (!item.isDefaultItem) {
             if (items.Count >= space) {
                 Debug.Log("No more space");
                 return false;
@@ -32,7 +31,6 @@ public class Inventory : MonoBehaviour
             items.Add(item);
             if (onItemChangedCallback != null)
                 onItemChangedCallback.Invoke();
-        }
         return true;
     }
     public void Remove(Item item) {
