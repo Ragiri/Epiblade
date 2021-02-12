@@ -15,7 +15,7 @@ public class Interactable : MonoBehaviour
 
     void Start() {
         player = PlayerManager.instance.player.transform;
-        //Debug.Log(player.position);
+        Debug.Log(player.position);
     }
     public virtual void Interact() {
         Debug.Log("Interacting with" + transform.name);
@@ -24,10 +24,10 @@ public class Interactable : MonoBehaviour
         Debug.Log("Stop interacting with" + transform.name);
     }
     void Update() {
-            float distance = 999;
-            if (interactionTransform != null)
-                distance = Vector3.Distance(player.position, interactionTransform.position);
+            float distance = Vector3.Distance(player.position, interactionTransform.position);
             
+            if (this.transform.name == "tente")
+                Debug.Log(distance + " " + player.localPosition + " " + interactionTransform.position + " " + player.name);
             if (distance <= radius) {
                 Interact();
                 hasInteract = true;
