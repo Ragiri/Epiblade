@@ -6,10 +6,9 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Holy Key", menuName = "Inventory/Key")]
 public class Key : Item {
 
-    public GameObject cage;
     public override void Use() {
         base.Use();
-        Destroy(cage);
+        Destroy(PrisonManager.instance.prison);
         isDefaultItem = false;
         RemoveFromInventory();
     }
