@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3055055824418880368}
+  - component: {fileID: -761183533450034959}
   m_Layer: 0
   m_Name: final_sword
   m_TagString: Untagged
@@ -35,6 +36,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-761183533450034959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2390969095224418762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 601f1393de150d344afc777e84062c8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 3
+  Speed: 0.19
+  Cooldown: 0
+  interactionTransform: {fileID: 3055055824418880368}
+  item: {fileID: 11400000, guid: 59908b7f86f253941be126f7a814c05a, type: 2}
 --- !u!1 &5091181902848908513
 GameObject:
   m_ObjectHideFlags: 0
