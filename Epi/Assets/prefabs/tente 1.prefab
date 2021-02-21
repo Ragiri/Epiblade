@@ -39,8 +39,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 221.95, y: -32.2}
-  m_SizeDelta: {x: 443.9, y: 64.4}
+  m_AnchoredPosition: {x: 303.55, y: -49.75}
+  m_SizeDelta: {x: 607.1, y: 99.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1077733467898054772
 CanvasRenderer:
@@ -267,8 +267,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -14.299927, y: 0}
-  m_SizeDelta: {x: -148.13953, y: 0.000030517578}
+  m_AnchoredPosition: {x: -33, y: 2.100006}
+  m_SizeDelta: {x: -185.521, y: -292.74255}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1077733467978761277
 CanvasRenderer:
@@ -328,7 +328,7 @@ MonoBehaviour:
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 1
-  m_CellSize: {x: 443.9, y: 64.4}
+  m_CellSize: {x: 607.1, y: 99.5}
   m_Spacing: {x: 0, y: 3.1}
   m_Constraint: 1
   m_ConstraintCount: 1
@@ -446,8 +446,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 221.95, y: -167.2}
-  m_SizeDelta: {x: 443.9, y: 64.4}
+  m_AnchoredPosition: {x: 303.55, y: -254.95}
+  m_SizeDelta: {x: 607.1, y: 99.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1077733468506450355
 CanvasRenderer:
@@ -675,8 +675,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 221.95, y: -99.7}
-  m_SizeDelta: {x: 443.9, y: 64.4}
+  m_AnchoredPosition: {x: 303.55, y: -152.35}
+  m_SizeDelta: {x: 607.1, y: 99.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1077733468766015472
 CanvasRenderer:
@@ -1325,11 +1325,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96

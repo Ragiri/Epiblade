@@ -25,9 +25,6 @@ public class Interactable : MonoBehaviour
     }
     void Update() {
             float distance = Vector3.Distance(player.position, interactionTransform.position);
-            
-            if (this.transform.name == "tente")
-                Debug.Log(distance + " " + player.localPosition + " " + interactionTransform.position + " " + player.name);
             if (distance <= radius) {
                 Interact();
                 hasInteract = true;

@@ -5,7 +5,7 @@ using UnityEngine;
 public class DialogTrigger : Interactable
 {
     public Dialog dialog;
-     public GameObject dialogWindow;
+    public GameObject dialogWindow;
 
     public override void Interact() {
         base.Interact();
