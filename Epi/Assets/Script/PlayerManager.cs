@@ -19,6 +19,6 @@ public class PlayerManager : MonoBehaviour
 
 
     public void KillPlayer() {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Scenes/gameOver");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Scenes/End");
     }
 }

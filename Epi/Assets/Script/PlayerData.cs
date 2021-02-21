@@ -18,6 +18,7 @@ public class PlayerData {
     public List<Capacity> capacity;
     public float[] position;
 
+    
     public PlayerData(CharacterStat player) {
         lvl = player.level.GetValue();
         health = player.currentHealth;
@@ -31,9 +32,9 @@ public class PlayerData {
         //items = Inventory.instance.items;
 
         position = new float[3];
-        position[0] = player.transform.position.x;
-        position[1] = player.transform.position.y;
-        position[2] = player.transform.position.z;
+        position[0] = PlayerManager.instance.player.transform.position.x;
+        position[1] = PlayerManager.instance.player.transform.position.y;
+        position[2] = PlayerManager.instance.player.transform.position.z;
     }
 
 }

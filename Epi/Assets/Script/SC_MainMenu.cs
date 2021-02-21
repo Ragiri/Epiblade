@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,7 +13,7 @@ public class SC_MainMenu : MonoBehaviour
     public void PlayNowButton()
     {
         Debug.Log("Text: start");
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Scenes/move");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Scenes/map");
     }
 
     public void CreditsButton()
