@@ -18,6 +18,7 @@ public class PlayerData {
     public List<Capacity> capacity;
     public float[] position;
 
+    
     public PlayerData(CharacterStat player) {
         lvl = player.level.GetValue();
         health = player.currentHealth;

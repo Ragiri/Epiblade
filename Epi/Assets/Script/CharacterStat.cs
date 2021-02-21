@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 
+
+[System.Serializable]
 public class CharacterStat : MonoBehaviour {
 
 	public int maxHealth = 150;
