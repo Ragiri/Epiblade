@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
+[System.Serializable]
 [CreateAssetMenu(fileName = "Heal", menuName = "Capacity/Heal")]
 public class CapacityHeal : Capacity {
     public int power = 0;

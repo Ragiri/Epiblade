@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 [CreateAssetMenu(fileName = "New Potion", menuName = "Inventory/Heal")]
 public class Heal : Item {
     public int healNb;

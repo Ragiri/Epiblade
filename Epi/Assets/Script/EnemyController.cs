@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+[System.Serializable]
 public class EnemyController : MonoBehaviour
 {    
     public float LookRadius = 10f;

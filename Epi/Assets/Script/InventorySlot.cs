@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
+[System.Serializable]
 public class InventorySlot : MonoBehaviour
 {
     public Image icon;

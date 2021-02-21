@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine.EventSystems;
 using UnityEngine;
 
+
+[System.Serializable]
 public class PlayerAttack : MonoBehaviour
 {
     public Camera cam;

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
+[System.Serializable]
 [CreateAssetMenu(fileName = "Holy Key", menuName = "Inventory/Key")]
 public class Key : Item {
 

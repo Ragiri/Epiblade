@@ -1,6 +1,9 @@
 ﻿using System.IO;
 using UnityEngine;
 using System.Runtime.Serialization.Formatters.Binary;
+
+
+[System.Serializable]
 public static class SaveSystem {
 
     public static void SavePlayer(CharacterStat player) {

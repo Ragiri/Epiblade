@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+[System.Serializable]
 [CreateAssetMenu(fileName = "Defance Up", menuName = "Capacity/DefUp")]
 public class DefanceUp : Capacity {
     public int power = 0;

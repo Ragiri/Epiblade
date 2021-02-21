@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+
+[System.Serializable]
 public class SpawnZone : MonoBehaviour {
     public float LookRadius = 10f;
     List<GameObject> enemies = new List<GameObject>();

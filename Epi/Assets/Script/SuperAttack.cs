@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
+[System.Serializable]
 [CreateAssetMenu(fileName = "Super Attack", menuName = "Capacity/SuperAttack")]
 public class SuperAttack : Capacity {
 

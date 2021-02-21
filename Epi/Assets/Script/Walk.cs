@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+
+
+[System.Serializable]
 public class Walk : MonoBehaviour
 {
     public Animator animator;

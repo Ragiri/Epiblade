@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class SC_MainMenu : MonoBehaviour
 {
     // Start is called before the first frame update

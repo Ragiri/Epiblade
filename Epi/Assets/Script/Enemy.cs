@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
+[System.Serializable]
 [RequireComponent(typeof(CharacterStat))]
 public class Enemy : Interactable {
     PlayerManager playerManager;

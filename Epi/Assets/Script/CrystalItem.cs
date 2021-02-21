@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
+[System.Serializable]
 [CreateAssetMenu(fileName = "Crystal", menuName = "Inventory/Crystal")]
 public class CrystalItem : Item {
 
