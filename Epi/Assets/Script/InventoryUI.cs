@@ -71,4 +71,9 @@ public class InventoryUI : MonoBehaviour
             }
         }
     }
+    public void QuitButton()
+    {
+        Debug.Log("Text: quit");
+        Application.Quit();
+    }
 }
